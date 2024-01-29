@@ -8,33 +8,33 @@ function App() {
       <header>
         <section className='title'>
           <h1>Marine Le Bec</h1>
-          <p>Développeuse web</p>
-          <p>full-stack</p>
+          <h2>Développeuse web
+          full-stack</h2>
         </section>
         <section className='tools'>
-          <h2>Tools</h2>
+          <h3>Tools</h3>
         </section>
       </header>
       <main>
         <section className='projects'>
-          <h2>Projects</h2>
+          <h3>Projects</h3>
         </section>
         <section className='blog'>
-          <h2>Blog</h2>
+          <h3>Blog</h3>
         </section>
         <section className='resume'>
-          <h2>CV</h2>
+          <h3>CV</h3>
         </section>
         <section className='about'>
-          <h2>About</h2>
+          <h3>About</h3>
         </section>
       </main>
       <footer>
         <section className='contact'>
-          <h2>Contact</h2>
+          <h3>Contact</h3>
         </section>
         <section className='social'>
-          <h2>Social</h2>
+          <h3>Social</h3>
         </section>
       </footer>
     </>
