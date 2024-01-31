@@ -1,15 +1,22 @@
 import './reset.css'
 import './App.scss'
+import { useState } from 'react';
 
 function App() {
+  //TODO Animate Title at hover
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
       <header>
-        <section className='title'>
+        <section
+          className={`title ${isHovered ? 'hovered' : ''}`}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <h1>Marine Le Bec</h1>
-          <h2>Développeuse web
-          full-stack</h2>
+          <h2>Développeuse web</h2>
+          <h2>full-stack</h2>
         </section>
         <section className='tools'>
           <h3>Tools</h3>
