@@ -1,3 +1,23 @@
 .tools {
-    background-color: #471ca8;
+  background-color: #471ca8;
+
+  .tools-logos {
+    display: none;
+    padding: 1rem;
   }
+
+  &.hovered .tools-logos.visible {
+    display: block;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
