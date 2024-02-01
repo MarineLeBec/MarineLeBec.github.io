@@ -1,6 +1,12 @@
+//* Styles
 import './reset.css'
 import './App.scss'
+
+//* Hooks
 import { useState } from 'react';
+
+//* Composants
+import Tools from '../Tools/Tools';
 
 function App() {
   //TODO Animate Title at hover
@@ -18,9 +24,7 @@ function App() {
           <h2>Développeuse web</h2>
           <h2>full-stack</h2>
         </section>
-        <section className='tools'>
-          <h3>Tools</h3>
-        </section>
+          <Tools />
       </header>
       <main>
         <section className='projects'>
