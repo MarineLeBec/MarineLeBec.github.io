@@ -29,15 +29,31 @@ const logos = [
 
 function Tools() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isUnhovered, setIsUnhovered] = useState(false);
 
   return (
     <section
-      className={`tools ${isHovered ? "hovered" : ""}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`tools ${
+        isHovered ? "hovered" : isUnhovered ? "unhovered" : ""
+      }`}
+      onMouseEnter={() => {
+        setIsHovered(true);
+        setIsUnhovered(false);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setIsUnhovered(true);
+        setTimeout(() => {
+          setIsUnhovered(false);
+        }, 2000);
+      }}
     >
       <h3>Tools</h3>
-      <div className={`tools-logos ${isHovered ? "visible" : ""}`}>
+      <div
+        className={`tools-logos ${
+          isHovered ? "visible" : isUnhovered ? "shading" : ""
+        }`}
+      >
         {logos.map((logo) => (
           <img key={logo.id} src={logo.src} alt={logo.alt} />
         ))}

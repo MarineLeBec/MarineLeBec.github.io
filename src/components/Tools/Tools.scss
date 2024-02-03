@@ -26,4 +26,19 @@
       }
     }
   }
+  &.unhovered .tools-logos.shading {
+    display: flex;
+    flex-wrap: wrap;
+    animation: fadeOut 2.1s;
+    -webkit-animation: fadeOut 2.1s;
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
 }
