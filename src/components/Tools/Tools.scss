@@ -1,13 +1,19 @@
 .tools {
   background-color: #471ca8;
+  align-content: center;
 
+  img {
+    width: 33%;
+  }
   .tools-logos {
     display: none;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   &.hovered .tools-logos.visible {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
 
