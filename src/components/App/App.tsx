@@ -7,6 +7,7 @@ import { useState } from "react";
 
 //* Composants
 import Tools from "../Tools/Tools";
+import Contact from "../Footer/Contact";
 //* -------------------------------------------------------- */
 
 function App() {
@@ -41,9 +42,7 @@ function App() {
         </section>
       </main>
       <footer>
-        <section className="contact">
-          <h3>Contact</h3>
-        </section>
+        <Contact />
         <section className="social">
           <h3>Social</h3>
         </section>

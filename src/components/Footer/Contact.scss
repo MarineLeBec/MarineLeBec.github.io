@@ -1,0 +1,51 @@
+.contact {
+  background-color: #d1105a;
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact-list {
+    display: none;
+    padding: 2rem;
+  }
+
+  &.hovered .contact-list.visible {
+    display: flex;
+
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .hovered-li {
+      transform: scale(1.4);
+      transform-origin: center;
+      transition: 1s;
+      -webkit-transition: 1s;
+    }
+  }
+  &.unhovered .contact-list.shading {
+    display: flex;
+
+    animation: fadeOut 1.1s;
+    -webkit-animation: fadeOut 1.1s;
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
