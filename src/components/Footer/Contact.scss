@@ -10,7 +10,9 @@
     display: none;
     padding: 2rem;
   }
-
+  a {
+    color: #ffffff;
+  }
   &.hovered .contact-list.visible {
     display: flex;
 
@@ -25,12 +27,16 @@
         opacity: 1;
       }
     }
-    
+
     .hovered-li {
-      transform: scale(1.4);
+      transform: scale(1.2);
       transform-origin: center;
       transition: 1s;
       -webkit-transition: 1s;
+    }
+
+    a {
+      color: #ffffff;
     }
   }
   &.unhovered .contact-list.shading {
