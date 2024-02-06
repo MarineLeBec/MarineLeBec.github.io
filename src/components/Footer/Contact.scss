@@ -13,7 +13,7 @@
   a {
     color: #ffffff;
   }
-  &.hovered .contact-list.visible {
+  &:hover .contact-list.visible {
     display: flex;
 
     animation: fadeIn 2s;
@@ -28,8 +28,8 @@
       }
     }
 
-    .hovered-li {
-      transform: scale(1.2);
+    li:hover {
+      transform: scale(1.05);
       transform-origin: center;
       transition: 1s;
       -webkit-transition: 1s;

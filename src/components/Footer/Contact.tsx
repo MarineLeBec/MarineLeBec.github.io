@@ -7,10 +7,6 @@ import { useState, useRef } from "react";
 function Contact() {
   const [isHovered, setIsHovered] = useState(false);
   const [isUnhovered, setIsUnhovered] = useState(false);
-  const [mailLiIsHovered, setMailLiIsHovered] = useState(false);
-  const [phoneLiIsHovered, setPhoneLiIsHovered] = useState(false);
-  const [behanceLiIsHovered, setBehanceLiIsHovered] = useState(false);
-  const [codewarsLiIsHovered, setCodewarsLiIsHovered] = useState(false);
 
   const mailRef = useRef<HTMLLIElement>(null);
   const phoneRef = useRef<HTMLLIElement>(null);
@@ -29,8 +25,7 @@ function Contact() {
 
   return (
     <section
-      className={`contact ${
-        isHovered ? "hovered" : isUnhovered ? "unhovered" : ""
+      className={`contact ${isUnhovered ? "unhovered" : ""
       }`}
       onMouseEnter={() => {
         setIsHovered(true);
@@ -54,13 +49,6 @@ function Contact() {
           <li
             ref={mailRef}
             onClick={() => copyTextToClipboard("marinelebec@protonmail.com")}
-            className={`${mailLiIsHovered ? "hovered-li" : ""}`}
-            onMouseEnter={() => {
-              setMailLiIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setMailLiIsHovered(false);
-            }}
           >
             e-mail
             <img
@@ -73,13 +61,6 @@ function Contact() {
           <li
             ref={phoneRef}
             onClick={() => copyTextToClipboard("0000000000")}
-            className={`${phoneLiIsHovered ? "hovered-li" : ""}`}
-            onMouseEnter={() => {
-              setPhoneLiIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setPhoneLiIsHovered(false);
-            }}
           >
             phone number
             <img
@@ -91,15 +72,7 @@ function Contact() {
           </li>
           <br />
           <br />
-          <li
-            className={`${behanceLiIsHovered ? "hovered-li" : ""}`}
-            onMouseEnter={() => {
-              setBehanceLiIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setBehanceLiIsHovered(false);
-            }}
-          >
+          <li>
             <a href="http://behance.net/marinelebec1" target="_blank">
               <img
                 width="24"
@@ -109,15 +82,7 @@ function Contact() {
               behance
             </a>
           </li>
-          <li
-            className={`${codewarsLiIsHovered ? "hovered-li" : ""}`}
-            onMouseEnter={() => {
-              setCodewarsLiIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setCodewarsLiIsHovered(false);
-            }}
-          >
+          <li>
             <a href="http://codewars.com/users/MarineLeBec" target="_blank">
               <img
                 width="24"
