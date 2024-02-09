@@ -1,7 +1,23 @@
 .projects {
   background-color: #ff930a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     cursor: pointer;
+  }
+
+  .projects-list {    
+    height: 75%;
+    width: 75%;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+
+    ul {
+      color: black;
+      text-align: justify;
+    }
   }
 }
