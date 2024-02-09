@@ -9,6 +9,7 @@ import { useState } from "react";
 import Tools from "../Tools/Tools";
 import Contact from "../Footer/Contact";
 import Social from "../Footer/Social";
+import Projects from "../Main/Projects";
 //* -------------------------------------------------------- */
 
 function App() {
@@ -29,9 +30,7 @@ function App() {
         <Tools />
       </header>
       <main>
-        <section className="projects">
-          <h3>Projects</h3>
-        </section>
+        <Projects />
         <section className="blog">
           <h3>Blog</h3>
         </section>
