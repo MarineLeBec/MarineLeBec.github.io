@@ -11,11 +11,11 @@ import Resume from "./Resume";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 const Home: React.FC = () => {
-  // Utilisation du hook useLocation pour obtenir l'objet location
   const location = useLocation();
 
-  // Classe conditionnelle en fonction de la route
+  // main className according to route
   const mainClass = location.pathname === "/" ? "grid-layout" : "";
+
   return (
     <main className={mainClass}>
       <Routes>

@@ -4,7 +4,7 @@ main {
 
     display: grid;
     grid-template-columns: 100%;
-    // Utilisation de la classe conditionnelle pour le style grid
+
     &.grid-layout {
       display: grid;
       grid-template-columns: 50% 50%;
