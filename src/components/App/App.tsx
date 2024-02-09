@@ -29,9 +29,7 @@ function App() {
         </section>
         <Tools />
       </header>
-      <main>
-        <Home />
-      </main>
+      <Home />
       <footer>
         <Contact />
         <Social />

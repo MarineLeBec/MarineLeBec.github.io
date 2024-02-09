@@ -39,17 +39,6 @@ header {
   }
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 768px) {
-    width: 50%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-}
-
 footer {
   display: flex;
   flex-direction: column;
@@ -83,6 +72,10 @@ section {
   border-radius: 1rem;
   text-transform: uppercase;
 
+  button {
+    display: none;
+  }
+
   @media screen and (min-width: 768px) {
     position: relative;
 
@@ -92,6 +85,7 @@ section {
       left: 0px;
     }
     button {
+      display: block;
       position: absolute;
       top: 0px;
       right: 0px;
