@@ -22,30 +22,48 @@ const Projects: React.FC = () => {
             />
           </Link>
         </button>
-
       </section>
     );
   }
 
   return (
     <section className="projects">
-      <h3>Projects</h3>
+      <h4>Some of my personal projects</h4>
       <button>
         <Link to="/">
           <img
-            width="64"
-            height="64"
+            width="50"
+            height="50"
             src="https://img.icons8.com/sf-black-filled/64/FFFFFF/cancel.png"
             alt="cancel"
           />
         </Link>
       </button>
       <div className="projects-list">
-        <ul>
-          <li>Movie scene generator</li>
-          <li>My Portfolio</li>
-          <li>Apothéose</li>
-        </ul>
+        <div className="project">
+          <h5>Projet</h5>
+          <p>Description du projet</p>
+          <img
+            src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="example"
+          />
+        </div>
+        <div className="project">
+          <h5>Projet</h5>
+          <p>Description du projet</p>
+          <img
+            src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="example"
+          />
+        </div>
+        <div className="project">
+          <h5>Projet</h5>
+          <p>Description du projet</p>
+          <img
+            src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="example"
+          />
+        </div>
       </div>
     </section>
   );

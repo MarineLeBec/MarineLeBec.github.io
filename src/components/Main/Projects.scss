@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=anuphan:100,200,300,400,500,600,700);
+
 .projects {
   background-color: #ff930a;
   display: flex;
@@ -7,17 +9,40 @@
   &:hover {
     cursor: pointer;
   }
+  h4 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: xx-large;
+    font-weight: 400;
+    margin: 1rem;
+  }
 
-  .projects-list {    
-    height: 75%;
+  .projects-list {
+    text-transform: none;
+    height: 80%;
     width: 75%;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0 1rem;
     background-color: white;
-
-    ul {
-      color: black;
-      text-align: justify;
+    overflow: scroll;
+  }
+  .project {
+    color: black;
+    text-align: justify;
+    font-family: "Anuphan", sans-serif;
+    h5 {
+      font-size: large;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    p {
+      font-weight: 400;
+      margin: 0.5rem auto;
+    }
+    img {
+      width: 100%;
+      border-radius: 1rem;
     }
   }
 }

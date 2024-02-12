@@ -38,7 +38,9 @@ header {
     grid-template-rows: 35% 65%;
   }
 }
-
+main {
+  height: auto;
+}
 footer {
   display: flex;
   flex-direction: column;
