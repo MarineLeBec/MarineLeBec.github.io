@@ -4,7 +4,9 @@
   background-color: #ff930a;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
+  height: auto;
+  overflow: scroll;
 
   &:hover {
     cursor: pointer;
@@ -20,10 +22,11 @@
 
   .projects-list {
     text-transform: none;
-    height: 80%;
-    width: 75%;
+    height: 90%;
+    width: 90%;
     border-radius: 1rem;
     padding: 0 1rem;
+    margin: 1rem;
     background-color: white;
     overflow: scroll;
   }

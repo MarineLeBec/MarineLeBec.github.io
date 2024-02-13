@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
 
   return (
     <section className="projects">
-      <h4>Some of my personal projects</h4>
+      <h4>My projects</h4>
       <button>
         <Link to="/">
           <img
