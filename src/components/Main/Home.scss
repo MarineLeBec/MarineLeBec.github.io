@@ -1,0 +1,13 @@
+main {
+  @media screen and (min-width: 768px) {
+    width: 50%;
+
+    display: grid;
+    grid-template-columns: 100%;
+
+    &.grid-layout {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.projects {
+  background-color: #ff930a;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: auto;
+  overflow-y: scroll;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+  h4 {
+    top: 0px;
+    left: 0px;
+    font-size: xx-large;
+    font-weight: 400;
+    margin: 1rem;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+    }
+  }
+
+  .projects-list {
+    text-transform: none;
+    height: 90%;
+    width: 90%;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    background-color: white;
+    overflow-y: scroll;
+  }
+  .project {
+    color: black;
+    text-align: justify;
+    font-family: "Anuphan", sans-serif;
+    h5 {
+      font-size: large;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    p {
+      font-weight: 400;
+      margin: 0.5rem auto;
+    }
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+}
