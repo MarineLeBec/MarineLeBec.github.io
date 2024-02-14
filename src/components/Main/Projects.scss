@@ -1,23 +1,25 @@
-@import url(https://fonts.bunny.net/css?family=anuphan:100,200,300,400,500,600,700);
-
 .projects {
   background-color: #ff930a;
   display: flex;
-  justify-content: center;
-  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
   height: auto;
-  overflow: scroll;
+  overflow-y: scroll;
+  position: relative;
 
   &:hover {
     cursor: pointer;
   }
   h4 {
-    position: absolute;
     top: 0px;
     left: 0px;
     font-size: xx-large;
     font-weight: 400;
     margin: 1rem;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+    }
   }
 
   .projects-list {
@@ -26,9 +28,9 @@
     width: 90%;
     border-radius: 1rem;
     padding: 0 1rem;
-    margin: 1rem;
+    margin: 1rem 0;
     background-color: white;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .project {
     color: black;
