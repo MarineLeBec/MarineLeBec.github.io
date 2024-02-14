@@ -1,0 +1,22 @@
+.resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: auto;
+  position: relative;
+
+  h4 {
+    top: 0px;
+    left: 0px;
+    font-size: xx-large;
+    font-weight: 400;
+    margin: 1rem;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+    }
+  }
+  object {
+    margin-bottom: 1rem;
+  }
+}

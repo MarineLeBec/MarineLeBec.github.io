@@ -11,7 +11,9 @@ const Projects: React.FC = () => {
   if (isLink) {
     return (
       <section className="projects">
-        <Link to="/projects"><h3>Projects</h3></Link>
+        <Link to="/projects">
+          <h3>Projects</h3>
+        </Link>
         <button>
           <Link to="/projects">
             <img
