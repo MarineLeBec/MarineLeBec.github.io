@@ -10,6 +10,7 @@ import Tools from "../Tools/Tools";
 import Contact from "../Footer/Contact";
 import Social from "../Footer/Social";
 import Home from "../Main/Home";
+import { Link } from "react-router-dom";
 //* -------------------------------------------------------- */
 
 function App() {
@@ -23,9 +24,11 @@ function App() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <h1>Marine Le Bec</h1>
-          <h2>Développeuse web</h2>
-          <h2>full-stack</h2>
+          <Link to="/">
+            <h1>Marine Le Bec</h1>
+            <h2>Développeuse web</h2>
+            <h2>full-stack</h2>
+          </Link>
         </section>
         <Tools />
       </header>
