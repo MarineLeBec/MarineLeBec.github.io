@@ -2,7 +2,7 @@
 import "../App/reset.css";
 import "./Contact.scss";
 //* Hooks
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function Contact() {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,16 +10,49 @@ function Contact() {
 
   const mailRef = useRef<HTMLLIElement>(null);
   const phoneRef = useRef<HTMLLIElement>(null);
+  const [copyEmailSuccess, setCopyEmailSuccess] = useState(false);
+  const [copyPhoneSuccess, setCopyPhoneSuccess] = useState(false);
 
-  // Check if the element is present
-  const copyTextToClipboard = (text: string) => {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (copyEmailSuccess) setCopyEmailSuccess(false);
+      if (copyPhoneSuccess) setCopyPhoneSuccess(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, [copyEmailSuccess, copyPhoneSuccess]);
+
+  const copyEmailToClipboard = (text: string) => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
         console.info(`${text} has been copied to clipboard !`);
+        setCopyEmailSuccess(true);
+
+        // Reset the success message after a short delay
+        setTimeout(() => {
+          setCopyEmailSuccess(false);
+        }, 2000);
       })
       .catch((error) => {
-        console.error(`"Unable to copy ${text} to clipboard", ${error}`);
+        console.error(`Unable to copy ${text} to clipboard`, error);
+      });
+  };
+
+  const copyPhoneToClipboard = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.info(`${text} has been copied to clipboard !`);
+        setCopyPhoneSuccess(true);
+
+        // Reset the success message after a short delay
+        setTimeout(() => {
+          setCopyPhoneSuccess(false);
+        }, 2000);
+      })
+      .catch((error) => {
+        console.error(`Unable to copy ${text} to clipboard`, error);
       });
   };
 
@@ -47,27 +80,44 @@ function Contact() {
         <ul>
           <li
             ref={mailRef}
-            onClick={() => copyTextToClipboard("marinelebec@protonmail.com")}
+            onClick={() => copyEmailToClipboard("marinelebec@protonmail.com")}
           >
             e-mail
-            <img
-              width="24"
-              height="24"
-              src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/copy--v1.png"
-              alt="Copy address to clipboard"
-            />
+            {copyEmailSuccess ? (
+              <img
+                width="25"
+                height="25"
+                src="https://img.icons8.com/ios/50/FFFFFF/task-completed.png"
+                alt="Copied to clipboard"
+              />
+            ) : (
+              <img
+                width="25"
+                height="25"
+                src="https://img.icons8.com/ios/50/FFFFFF/clipboard.png"
+                alt="Copy to clipboard"
+              />
+            )}
           </li>
-          <li ref={phoneRef} onClick={() => copyTextToClipboard("0000000000")}>
+          <li ref={phoneRef} onClick={() => copyPhoneToClipboard("0000000000")}>
             phone
-            <img
-              width="24"
-              height="24"
-              src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/copy--v1.png"
-              alt="Copy number to clipboard"
-            />
+            {copyPhoneSuccess ? (
+              <img
+                width="25"
+                height="25"
+                src="https://img.icons8.com/ios/50/FFFFFF/task-completed.png"
+                alt="Copied to clipboard"
+              />
+            ) : (
+              <img
+                width="25"
+                height="25"
+                src="https://img.icons8.com/ios/50/FFFFFF/clipboard.png"
+                alt="Copy to clipboard"
+              />
+            )}
           </li>
         </ul>
-
         <div className="media">
           <a href="http://behance.net/marinelebec1" target="_blank">
             <img
