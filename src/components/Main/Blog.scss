@@ -1,0 +1,20 @@
+.blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  span {
+    display: none;
+    font-size: xx-large;
+    font-weight: 300;
+  }
+  &:hover {
+    span {
+      position: absolute;
+      display: flex;
+      animation: fadeIn 2s;
+      -webkit-animation: fadeIn 2s;
+    }
+  }
+}
