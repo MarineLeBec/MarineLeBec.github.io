@@ -3,11 +3,14 @@ import "../App/reset.css";
 import "./Resume.scss";
 //* Hooks
 import { Link, useLocation } from "react-router-dom";
-import CV from "../../assets/marinelebecCV.pdf"
+import CV from "../../assets/marinelebecCV.pdf";
 
 const Resume: React.FC = () => {
   const location = useLocation();
   const isLink = location.pathname === "/";
+
+  // Add the desired parameters to the PDF file URL
+  const CVUrl = `${CV}#toolbar=0&navpanes=0`;
 
   if (isLink) {
     return (
@@ -42,15 +45,13 @@ const Resume: React.FC = () => {
           />
         </Link>
       </button>
-      <object data={CV} width="90%" height="90%">
+      <iframe src={CVUrl} width="90%" height="90%">
         <p>
           Unable to display PDF file.
-          <a href="">
-            Download
-          </a>
+          <a href="">Download</a>
           instead.
         </p>
-      </object>
+      </iframe>
     </section>
   );
 };
