@@ -99,7 +99,7 @@ function Contact() {
               />
             )}
           </li>
-          <li ref={phoneRef} onClick={() => copyPhoneToClipboard("0000000000")}>
+          <li ref={phoneRef} onClick={() => copyPhoneToClipboard("0629616392")}>
             phone
             {copyPhoneSuccess ? (
               <img
