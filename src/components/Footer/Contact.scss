@@ -8,14 +8,19 @@
 
   .contact-list {
     display: none;
-    padding: 2rem;
   }
+
   a {
     color: #ffffff;
   }
-  &:hover .contact-list.visible {
-    display: flex;
 
+  &:hover .contact-list.visible {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
 
@@ -28,20 +33,26 @@
       }
     }
 
+    .media {
+      display: flex;
+    }
+
+    a:hover,
     li:hover {
+      cursor: pointer;
       transform: scale(1.05);
       transform-origin: center;
       transition: 1s;
       -webkit-transition: 1s;
     }
-
-    a {
-      color: #ffffff;
-    }
   }
-  &.unhovered .contact-list.shading {
-    display: flex;
 
+  &.unhovered .contact-list.shading {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     animation: fadeOut 1.1s;
     -webkit-animation: fadeOut 1.1s;
 

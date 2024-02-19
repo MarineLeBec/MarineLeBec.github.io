@@ -16,6 +16,7 @@ const Blog: React.FC = () => {
           alt="plus"
         />
       </button>
+      <span>Coming soon...</span>
     </section>
   );
 };
